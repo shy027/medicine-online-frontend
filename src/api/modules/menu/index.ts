@@ -6,17 +6,17 @@ import { _API } from '@/api/axios/servicePort'
  * @name 菜单模块
  */
 // * 菜单列表
-export const getMenuList = (params: { type: String }) => {
+export const getMenuList = (params: { type: string }) => {
   return http.post<SysMenu.ResMenuList>(_API + '/sys/menu/list', params)
 }
 
 // * 添加菜单
-export const addMenu = (params: { type: String }) => {
+export const addMenu = (params: { type: string }) => {
   return http.post(_API + '/sys/menu/add', params)
 }
 
 // * 修改菜单
-export const editMenu = (params: { type: String }) => {
+export const editMenu = (params: { type: string }) => {
   return http.post(_API + '/sys/menu/edit', params)
 }
 
