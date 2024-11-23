@@ -1,3 +1,11 @@
+/*
+ * @Author: shy 1533103845@qq.com
+ * @Date: 2024-11-23 21:02:22
+ * @LastEditors: shy 1533103845@qq.com
+ * @LastEditTime: 2024-11-23 21:41:57
+ * @FilePath: \medicine-online-frontend\src\main.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 /**
  * main.ts
  *
@@ -5,16 +13,16 @@
  */
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
 import 'virtual:windi.css'
 // Components
-import App from './App.vue'
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
-const app = createApp(App)
+const app = createApp(App);
 
-registerPlugins(app)
+registerPlugins(app);
 
-app.mount('#app')
+app.mount("#app");
