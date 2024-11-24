@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     我的问答
   </div>
 </template>
