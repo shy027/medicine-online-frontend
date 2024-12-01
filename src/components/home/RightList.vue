@@ -1,3 +1,11 @@
+<!--
+ * @Author: shy 1533103845@qq.com
+ * @Date: 2024-11-26 07:59:48
+ * @LastEditors: shy 1533103845@qq.com
+ * @LastEditTime: 2024-12-01 21:41:28
+ * @FilePath: \medicine-online-frontend\src\components\home\RightList.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <div class="list flex relative left-120">
     <div v-for="item in list" :key="item.id" class="list-item my-6">
@@ -9,8 +17,14 @@
     </div>
   </div>
   <div>
-    <img src="https://www.helloimg.com/i/2024/11/24/674341575ef58.png" class="h-17 relative left-30 top-3">
-    <img src="https://www.helloimg.com/i/2024/11/24/674341575ef58.png" class="h-17 relative left-30 top-14">
+    <img
+      src="https://www.helloimg.com/i/2024/11/24/674341575ef58.png"
+      class="h-17 relative left-30 top-3"
+    />
+    <img
+      src="https://www.helloimg.com/i/2024/11/24/674341575ef58.png"
+      class="h-17 relative left-30 top-14"
+    />
   </div>
 </template>
 <script setup lang="ts">
@@ -57,11 +71,11 @@ const list = [
   display: flex;
   flex-direction: column;
 }
-.bText{
+.bText {
   font-size: 15px;
   color: gray;
 }
-.list{
+.list {
   flex-wrap: wrap;
   flex-direction: row;
   width: 31%;
@@ -71,8 +85,12 @@ const list = [
   align-items: center; /* 垂直居中对齐 */
   width: 50%; /* 减去间距，确保每行两个 */
 }
-.image{
+.image {
   width: 60px;
   margin-right: 20px;
+}
+::selection {
+  background-color: #43af79;
+  color: white;
 }
 </style>
