@@ -2,36 +2,36 @@
  * @Author: shy 1533103845@qq.com
  * @Date: 2024-11-23 21:45:05
  * @LastEditors: shy 1533103845@qq.com
- * @LastEditTime: 2024-11-24 00:14:48
+ * @LastEditTime: 2024-12-01 21:30:50
  * @FilePath: \medicine-online-frontend\src\components\index\header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <header>
-    <div class="flex justify-center">
-      <div class="header-item position-relative right-50">
+    <div class="flex justify-center nav">
+      <div class="header-item relative right-20">
         <img
           src="https://www.helloimg.com/i/2024/11/23/6741f9f28cf67.png"
-          class="h-15"
+          class="h-12"
         />
-        <span class="px-3 py-1 text-h6 cursor-default">中医在线</span>
+        <span class="px-3 py-1 text-h8 cursor-default">中医在线</span>
       </div>
       <div
         v-for="(item, index) in header"
         :key="index"
-        class="px-3 py-5 text-h6 cursor-pointer"
+        class="px-3 py-4 text-h8 cursor-pointer"
         :class="{ 'text-green-500': item.route === currentRoute }"
         @click="wayTo(item.route)"
       >
         {{ item.name }}
       </div>
       <div
-        class="header-item position-relative left-40 cursor-pointer"
+        class="header-item position-relative left-20 cursor-pointer"
         :class="{ 'text-green-500': user[0].route === currentRoute }"
         @click="wayTo(user[0].route)"
       >
-        <img :src="user[0].avatar" class="h-12 rounded-circle" />
-        <span class="px-3 py-1 text-h6">{{ user[0].name }}</span>
+        <img :src="user[0].avatar" class="h-8 rounded-circle" />
+        <span class="px-3 py-1 text-h8">{{ user[0].name }}</span>
       </div>
     </div>
   </header>
@@ -95,7 +95,13 @@ const wayTo = (param: any) => {
 
 <style scoped>
 header {
+  position: fixed; /* 固定定位 */
+  top: 0; /* 距离顶部0 */
+  left: 0; /* 距离左侧0 */
+  width: 100%; /* 宽度设置为100%，确保覆盖整个屏幕宽度 */
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* 设置较高的z-index确保header在最上层 */
+  background-color: white;
 }
 .header-item {
   display: flex; /* 使用flex布局 */
