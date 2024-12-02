@@ -1,13 +1,7 @@
 <template>
-  <div>
-    我的考核
-  </div>
+  <div>学习统计</div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,5 +1,6 @@
+
 <template>
-  <div class="w-full bg-blue-400">个人收藏</div>
+  <div>考核</div>
 </template>
 
 <script setup lang="ts"></script>
