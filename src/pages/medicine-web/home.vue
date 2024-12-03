@@ -38,12 +38,14 @@
     >
     <BottomList></BottomList>
   </div>
+  <Bottom></Bottom>
 </template>
 
 <script setup lang="ts">
 import Swiper from "@/components/home/Swiper.vue";
 import RightList from "@/components/home/RightList.vue";
 import BottomList from "@/components/home/BottomList.vue";
+import Bottom from "@/components/index/Bottom.vue";
 </script>
 
 <style scoped>
