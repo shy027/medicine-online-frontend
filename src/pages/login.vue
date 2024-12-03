@@ -17,11 +17,11 @@
         </div>
         <div class="relative bottom-140 left-90">
           <div class="login-methods">
-            <button @click="showLoginMethod('phone')" class="m-5 text-h6">
+            <button @click="showLoginMethod('phone')" class="m-5 text-h6" :class="{'text-green-500': currentMethod == 'phone' }">
               手机号登录
             </button>
             <span class="text-h5">|</span>
-            <button @click="showLoginMethod('qr')" class="m-5 text-h6">
+            <button @click="showLoginMethod('qr')" class="m-5 text-h6" :class="{'text-green-500': currentMethod == 'qr' }">
               二维码登录
             </button>
           </div>
@@ -84,7 +84,8 @@
                 </svg>
                 <input type="text" placeholder="请输入验证码" class="ml-2" v-model="ma" @blur="validateMa" />
               </div>
-              <button class="b1" :class="{ 'button-true': !buttonError }" @click="captcha">获取验证码</button>
+              <button class="b1" :class="{ 'button-true': !buttonError }" @click="captcha" v-if="count == 60">获取验证码</button>
+              <button v-else class="b1">{{ count }}s</button>
             </div>
             <div class="h-6">
               <transition name="fade">
@@ -108,10 +109,12 @@ import { ref } from "vue";
 const currentMethod = ref("phone");
 const phone = ref();
 const ma = ref();
+const count = ref(60);
 const phoneError = ref(false);
 const buttonError = ref(true);
 const maError = ref(false);
 const loginError = ref(true);
+const intervalId = ref<number | null>(null);
 
 function showLoginMethod(method: string) {
   currentMethod.value = method;
@@ -121,6 +124,15 @@ function showLoginMethod(method: string) {
   loginError.value = true;
 }
 
+const tick = () => {
+  count.value--;
+  if(count.value <= 0){
+    clearInterval(intervalId.value!);
+    intervalId.value = null;
+    count.value = 60;
+  }
+}
+
 function login() {
   if(!loginError.value){
     // 登录逻辑
@@ -128,6 +140,7 @@ function login() {
 }
 function captcha() {
   if(!buttonError.value){
+    intervalId.value = setInterval(() => tick(), 1000);
     // 获取验证码逻辑
   }
 }
@@ -168,6 +181,10 @@ function validateMa() {
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+::selection {
+  background-color: #43af79;
+  color: white;
 }
 .center {
   width: 1080px;
