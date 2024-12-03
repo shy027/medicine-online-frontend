@@ -83,7 +83,7 @@ const user = [
   {
     name: "我是奶龙",
     avatar: "https://www.helloimg.com/i/2024/10/08/670513635044e.jpg",
-    route: "personal",
+    route: "personal/collection",
   },
 ];
 const currentRoute = ref("");

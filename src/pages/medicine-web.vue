@@ -5,11 +5,11 @@
 </template>
 
 <script setup lang="ts">
-import Header from "@/components/index/header.vue";
+import Header from "@/components/index/Header.vue";
 </script>
 
 <style scoped>
-.header{
+.header {
   margin-top: 58px;
 }
 </style>

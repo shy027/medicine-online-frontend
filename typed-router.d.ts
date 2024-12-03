@@ -34,6 +34,7 @@ declare module 'vue-router/auto-routes' {
     '/medicine-web/personal/browsing': RouteRecordInfo<'/medicine-web/personal/browsing', '/medicine-web/personal/browsing', Record<never, never>, Record<never, never>>,
     '/medicine-web/personal/collection': RouteRecordInfo<'/medicine-web/personal/collection', '/medicine-web/personal/collection', Record<never, never>, Record<never, never>>,
     '/medicine-web/personal/edit': RouteRecordInfo<'/medicine-web/personal/edit', '/medicine-web/personal/edit', Record<never, never>, Record<never, never>>,
+    '/medicine-web/personal/logout': RouteRecordInfo<'/medicine-web/personal/logout', '/medicine-web/personal/logout', Record<never, never>, Record<never, never>>,
     '/medicine-web/personal/quiz': RouteRecordInfo<'/medicine-web/personal/quiz', '/medicine-web/personal/quiz', Record<never, never>, Record<never, never>>,
     '/medicine-web/personal/stact': RouteRecordInfo<'/medicine-web/personal/stact', '/medicine-web/personal/stact', Record<never, never>, Record<never, never>>,
     '/medicine-web/practice': RouteRecordInfo<'/medicine-web/practice', '/medicine-web/practice', Record<never, never>, Record<never, never>>,

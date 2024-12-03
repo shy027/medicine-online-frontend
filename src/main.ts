@@ -16,6 +16,7 @@
 import { registerPlugins } from "@/plugins";
 import "virtual:windi.css";
 import "swiper/css";
+import vuetify from "./plugins/vuetify";
 // Components
 import App from "./App.vue";
 
@@ -23,7 +24,7 @@ import App from "./App.vue";
 import { createApp } from "vue";
 
 const app = createApp(App);
-
+createApp(App).use(vuetify).mount("#app");
 registerPlugins(app);
 
 app.mount("#app");

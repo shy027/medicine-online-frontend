@@ -9,8 +9,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     Bottom: typeof import('./src/components/index/Bottom.vue')['default']
     BottomList: typeof import('./src/components/home/BottomList.vue')['default']
+    FeatureList: typeof import('./src/components/personal/FeatureList.vue')['default']
     Header: typeof import('./src/components/index/Header.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Msg: typeof import('./src/components/personal/Msg.vue')['default']
     RightList: typeof import('./src/components/home/RightList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
